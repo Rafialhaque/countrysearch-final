@@ -4,65 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CountryInfo Pro</title>
-  <meta name="description" content="Search detailed country data with premium smooth UI/UX features including modal popups and blurred background.">
+  <meta name="description" content="Search detailed country data with premium UI/UX: immersive header, modal popups, theme toggle.">
+
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Main Styles -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Theme Toggle -->
-  <div class="theme-toggle" aria-label="Toggle light/dark theme">
-    <input type="checkbox" id="toggle-theme" /><label for="toggle-theme"><span class="sun">☀️</span><span class="moon">🌙</span></label>
-  </div>
-
-  <!-- Navigation -->
-  <header class="site-header" role="banner">
-    <nav class="main-nav container" role="navigation" aria-label="Main">
-      <ul>
-        <li><a href="#home">Home</a></li>
+  <!-- Header & Hero -->
+  <header class="site-header">
+    <nav class="main-nav container">
+      <a href="#home" class="nav-logo">CountryInfo<span class="pro">Pro</span></a>
+      <ul class="nav-links">
         <li><a href="#features">Features</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button class="theme-btn" id="toggle-theme" aria-label="Toggle theme">🌙</button>
     </nav>
+    <div class="hero-content container" id="home">
+      <h1 class="hero-title">Discover Countries Effortlessly</h1>
+      <p class="hero-subtitle">Fast, interactive, and beautiful information at your fingertips.</p>
+      <form id="search-form" class="search-form" role="search">
+        <input type="search" id="search-input" placeholder="e.g. Canada, Bangladesh" required>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero-section container">
-    <h1 class="hero-title">Explore the World</h1>
-    <p class="hero-subtitle">Real-time country data with smooth animations.</p>
-    <form id="search-form" class="search-form" role="search">
-      <input type="search" id="search-input" placeholder="Type a country name..." aria-required="true">
-      <button type="submit" class="btn btn-primary">Search</button>
-    </form>
-  </section>
-
-  <!-- Features Section -->
+  <!-- Features -->
   <section id="features" class="features-section container">
     <h2 class="section-title">Features</h2>
     <div class="features-grid">
       <div class="feature-card"><h3>Instant Search</h3></div>
       <div class="feature-card"><h3>Modal Results</h3></div>
-      <div class="feature-card"><h3>Dark/Light Theme</h3></div>
+      <div class="feature-card"><h3>Theme Toggle</h3></div>
       <div class="feature-card"><h3>Accessibility</h3></div>
     </div>
   </section>
 
-  <!-- Results Modal -->
+  <!-- Modal -->
   <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="modal-content">
       <button id="modal-close" class="modal-close" aria-label="Close">×</button>
-      <div id="modal-body" class="modal-body">
-        <!-- Dynamic content -->
-      </div>
+      <div id="modal-body" class="modal-body"></div>
     </div>
   </div>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact" class="contact-section container">
     <h2 class="section-title">Contact</h2>
-    <p>Feedback? <a href="mailto:support@countryinfo.pro">Email us</a>.</p>
+    <p>Have questions? <a href="mailto:support@countryinfo.pro">Email us</a>.</p>
   </section>
 
   <!-- Footer -->
@@ -70,7 +63,7 @@
     <p>© 2025 CountryInfo Pro</p>
   </footer>
 
-  <!-- Main Script -->
+  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
