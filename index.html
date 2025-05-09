@@ -3,38 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Country Info Finder</title>
+  <title>CountryInfo Pro</title>
+  <meta name="description" content="Search detailed country data with premium smooth UI/UX features including modal popups and blurred background.">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Main Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="logo">🌍 Country Info Finder</h1>
-      <nav class="main-nav">
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <!-- Theme Toggle -->
+  <div class="theme-toggle" aria-label="Toggle light/dark theme">
+    <input type="checkbox" id="toggle-theme" /><label for="toggle-theme"><span class="sun">☀️</span><span class="moon">🌙</span></label>
+  </div>
+
+  <!-- Navigation -->
+  <header class="site-header" role="banner">
+    <nav class="main-nav container" role="navigation" aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="search-section container">
-    <form id="search-form" class="search-form">
-      <input type="search" id="search-input" placeholder="Search for a country..." required>
-      <button type="submit" class="btn-primary">Search</button>
+  <!-- Hero Section -->
+  <section id="home" class="hero-section container">
+    <h1 class="hero-title">Explore the World</h1>
+    <p class="hero-subtitle">Real-time country data with smooth animations.</p>
+    <form id="search-form" class="search-form" role="search">
+      <input type="search" id="search-input" placeholder="Type a country name..." aria-required="true">
+      <button type="submit" class="btn btn-primary">Search</button>
     </form>
   </section>
 
-  <section id="results" class="results-section container">
-    <!-- Country cards will be injected here -->
+  <!-- Features Section -->
+  <section id="features" class="features-section container">
+    <h2 class="section-title">Features</h2>
+    <div class="features-grid">
+      <div class="feature-card"><h3>Instant Search</h3></div>
+      <div class="feature-card"><h3>Modal Results</h3></div>
+      <div class="feature-card"><h3>Dark/Light Theme</h3></div>
+      <div class="feature-card"><h3>Accessibility</h3></div>
+    </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Country Info Finder. All rights reserved.</p>
+  <!-- Results Modal -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+      <div id="modal-body" class="modal-body">
+        <!-- Dynamic content -->
+      </div>
     </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section container">
+    <h2 class="section-title">Contact</h2>
+    <p>Feedback? <a href="mailto:support@countryinfo.pro">Email us</a>.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2025 CountryInfo Pro</p>
   </footer>
 
+  <!-- Main Script -->
   <script src="script.js"></script>
 </body>
 </html>
