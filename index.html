@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Country Info Search</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Info Finder</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Country Info Search</h1>
-    </header>
-    <main>
-        <div class="search-container">
-            <form id="search-form">
-                <input type="text" id="search-input" placeholder="Enter country name..." required>
-                <button type="submit">Search</button>
-            </form>
-        </div>
-        <div id="result"></div>
-    </main>
-    <footer>
-        <p>&copy; 2025 Country Info App</p>
-    </footer>
-    <script src="js/script.js"></script>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">🌍 Country Info Finder</h1>
+      <nav class="main-nav">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="search-section container">
+    <form id="search-form" class="search-form">
+      <input type="search" id="search-input" placeholder="Search for a country..." required>
+      <button type="submit" class="btn-primary">Search</button>
+    </form>
+  </section>
+
+  <section id="results" class="results-section container">
+    <!-- Country cards will be injected here -->
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Country Info Finder. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
